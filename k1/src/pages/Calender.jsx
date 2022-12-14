@@ -3,6 +3,7 @@ import DateObject from "react-date-object";
 import Navbar from "../components/Navbar";
 import { useProjectContext } from "../context/ProjectContext";
 import axios from "axios";
+import Header1 from "../components/Header1";
 const host = "http://localhost:3000/";
 
 function Calender() {
@@ -25,7 +26,7 @@ function Calender() {
 
   return (
     <div>
-      <h1>Calender</h1>
+      <Header1 text={"Calender"}/>
       Filter timelogs by date
       <br />
       <input

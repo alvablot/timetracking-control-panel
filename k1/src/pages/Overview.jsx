@@ -5,6 +5,7 @@ import AddTask2 from "../components/AddTask2";
 import Navbar from "../components/Navbar";
 import { useProjectContext } from "../context/ProjectContext";
 import axios from "axios";
+import Header1 from "../components/Header1";
 const host = "http://localhost:3000/";
 
 function Overview() {
@@ -60,10 +61,7 @@ function Overview() {
     }, [showHideProjects]);
     return (
         <div>
-            <h1>
-                Overview
-            </h1>
-
+            <Header1 text={"Overview"} />
             <div className={showHideProjects}>
                 <AddProject trigger={trigger} getData={getData} id="add-project" />
             </div>

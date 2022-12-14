@@ -11,6 +11,8 @@ import Projects from "./components/Projects";
 import CreateInvoice from "./components/CreateInvoice";
 import Invoices from "./components/Invoices";
 import Menu from "./components/Menu";
+import Header2 from "./components/Header2";
+import Header1 from "./components/Header1";
 
 function App() {
     const {
@@ -37,7 +39,7 @@ function App() {
         fetchData("timelogs");
         fetchData("invoices");
     }
-    
+
     useEffect(() => {
         fetchAll();
     }, []);
@@ -77,7 +79,7 @@ function App() {
             </div>
             {showHideContent[0] === "block" &&
             showHideContent[showHideContent.length - 1] === "block" ? (
-                <h1>Overview</h1>
+                <Header1 text={"Overview"} />
             ) : (
                 ""
             )}
@@ -88,7 +90,7 @@ function App() {
                 <Projects />
             </div>
             <div style={{ display: showHideContent[1] }}>
-                <h2>Tasks last 30 days</h2>
+                <Header2 text={"Tasks last 30 days"} />
                 <table>
                     <thead>
                         <tr>
@@ -127,7 +129,7 @@ function App() {
             </div>
 
             <div id="fwefger" style={{ display: showHideContent[2] }}>
-                <h2>All tasks</h2>
+                <Header2 text={"All tasks"} />
                 <table>
                     <thead>
                         <tr>
@@ -166,7 +168,7 @@ function App() {
             </div>
 
             <div id="sf" style={{ display: showHideContent[3] }}>
-                <h2>Timelogs last 30 days</h2>
+                <Header2 text={"Timelogs last 30 days"} />
                 <table>
                     <thead>
                         <tr>
@@ -199,7 +201,7 @@ function App() {
             </div>
 
             <div style={{ display: showHideContent[4] }}>
-                <h2>All timelogs</h2>
+                <Header2 text={"All timelogs"} />
                 <table>
                     <thead>
                         <tr>

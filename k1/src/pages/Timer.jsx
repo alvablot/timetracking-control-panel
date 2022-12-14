@@ -4,6 +4,7 @@ import { useProjectContext } from "../context/ProjectContext";
 import Navbar from "../components/Navbar";
 import AddTimer from "../components/AddTimer";
 import axios from "axios";
+import Header1 from "../components/Header1";
 const host = "http://localhost:3000/";
 
 function Timer() {
@@ -74,7 +75,7 @@ function Timer() {
     }, []);
     return (
         <div>
-            <h1>Timer</h1>
+            <Header1 text={"Timer"} />
             <AddTimer
                 dateTime={dateTime}
                 setDateTime={setDateTime}

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Project, Task, Invoice } from "../lib/interfaces";
 import { useProjectContext } from "../contexts/ProjContext";
 import axios from "axios";
+import Header2 from "./Header2";
 const host: string = "http://localhost:3000/";
 
 function CreateInvoice() {
@@ -98,7 +99,7 @@ function CreateInvoice() {
     }
     return (
         <div className="newInvoice">
-            <h2>Create invoice</h2>
+            <Header2 text={"Create invoice"} />
             <form>
                 <select
                     onChange={(e) => {

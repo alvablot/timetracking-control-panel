@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useProjectContext } from "../contexts/ProjContext";
 import { Project, Task, Invoice } from "../lib/interfaces";
+import Header2 from "./Header2";
 const host: string = "http://localhost:3000/";
 const now: Date = new Date();
 const thisYear: number = now.getFullYear();
@@ -64,7 +65,7 @@ function Invoices() {
 
     return (
         <div>
-            <h2>Invoices</h2>
+            <Header2 text={"Invoices"} />
             <table>
                 <thead>
                     <tr>
@@ -118,7 +119,7 @@ function Invoices() {
                 </tbody>
             </table>
 
-            <div className="dia-container">
+            {/* <div className="dia-container">
                 {monthlyAmount.map((month, i) => {
                     return (
                         <div key={i} style={{ height: month / 10 + 50 }}>
@@ -151,7 +152,7 @@ function Invoices() {
                 <div>OCT</div>
                 <div>NOV</div>
                 <div>DEC</div>
-            </div>
+            </div> */}
         </div>
     );
 }

@@ -2,6 +2,7 @@ import { ChangeEvent } from "react";
 import { useProjectContext } from "../contexts/ProjContext";
 import axios from "axios";
 import updateImg from "../assets/icon-for-update.png";
+import Header2 from "./Header2";
 const host: string = "http://localhost:3000/";
 
 function Projects() {
@@ -32,7 +33,7 @@ function Projects() {
     }
     return (
         <div className="projects">
-            <h2>Projects</h2>
+            <Header2 text={"Projects"} />
             <table>
                 <thead>
                     <tr>
