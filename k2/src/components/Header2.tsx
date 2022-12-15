@@ -1,13 +1,11 @@
-import React from 'react'
+import React from "react";
 
 type Props = {
-  text: string;
-}
+    text: string;
+};
 
 function Header2(props: Props) {
-  return (
-    <h2>{props.text}</h2>
-  )
+    return <h2>{props.text}</h2>;
 }
 
-export default Header2
+export default Header2;

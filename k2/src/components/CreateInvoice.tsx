@@ -248,6 +248,7 @@ function CreateInvoice() {
                     <div>Customer </div>
                     <div>
                         <input
+                            placeholder="Add Invoice"
                             required
                             className="normalInput"
                             type="text"

@@ -1,4 +1,4 @@
 npx playwright codegen localhost...
-npx playwright test name.test.ts
+npx playwright test k1.test.js
 
 json-server --watch db.json
