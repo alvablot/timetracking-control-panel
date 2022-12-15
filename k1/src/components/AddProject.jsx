@@ -45,6 +45,7 @@ function AddProject(props) {
                 Name
                 <br />
                 <input
+                    data-testid="inputField"
                     onChange={(e) => setProjectName(e.target.value)}
                     name="name"
                     type="text"
@@ -115,9 +116,7 @@ function AddProject(props) {
                 onClick={() => {
                     viewInput("create");
                 }}
-            >
-                Create new project
-            </button>
+            >Create new project</button>
         </div>
     );
 }

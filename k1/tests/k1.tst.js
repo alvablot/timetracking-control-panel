@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-
+let i = 1;
 test("test", async ({ page }) => {
     await page.goto("http://127.0.0.1:5173/");
     await expect(page).toHaveTitle(/K1 Petter Karlsson/);
@@ -24,7 +24,7 @@ test("test", async ({ page }) => {
 
     await page.getByRole("button", { name: "New task" }).first().click();
     await page.getByRole("textbox").click();
-    await page.getByRole("textbox").fill("Title");
+    await page.getByRole("textbox").fill("Test title");
     await page.getByRole("button", { name: "Add task" }).click();
     await page.getByRole("button", { name: "Abort" }).click();
     await page.getByRole("button", { name: "Tasks" }).click();
@@ -42,12 +42,12 @@ test("test", async ({ page }) => {
     //Calender
     await page.getByRole("link", { name: "calender" }).click();
     await page.getByRole("textbox").fill("2022-11-23");
-    await page.getByRole("button", { name: "x" }).nth(0).click();
+    // await page.getByRole("button", { name: "x" }).nth(0).click();
 
     // Delete
-    await page.getByRole("link", { name: "overview" }).click();
-    await page.getByRole("button", { name: "Tasks" }).click();
-    await page.locator(".visible > div:nth-child(8) > button").click();
-    await page.getByRole("button", { name: "Projects" }).click();
-    await page.locator("div:nth-child(7) > button").first().click();
+    // await page.getByRole("link", { name: "overview" }).click();
+    // await page.getByRole("button", { name: "Tasks" }).click();
+    // await page.locator(".visible > div:nth-child(8) > button").click();
+    // await page.getByRole("button", { name: "Projects" }).click();
+    // await page.locator("div:nth-child(7) > button").first().click();
 });

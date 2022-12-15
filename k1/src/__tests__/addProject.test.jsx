@@ -8,6 +8,7 @@ import { ProjectProvider } from "../context/ProjectContext";
 import App from "../App";
 
 test("renders correct", async () => {
+    //Arrange
     render(
         <ProjectProvider>
             <App>
@@ -15,6 +16,12 @@ test("renders correct", async () => {
             </App>
         </ProjectProvider>
     );
+    const testAddproject = "Testing add project";
 
+    //Act
+    await userEvent.type(screen.getByTestId("inputField"), testAddproject);
+    await userEvent.click(screen.getByText("Create new project"));
 
+    //Assert
+    //expect(screen.getByText(/Testing add project/i)).toHaveTextContent("Testing add project (not done)");
 });
