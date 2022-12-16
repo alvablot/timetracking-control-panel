@@ -94,15 +94,12 @@ function Overview() {
                 <h2>Projects</h2>
                 {projects.map((project) => {
                     return (
-                        <div
-                            key={`proj_${project.id}`}
-                            className="project-container"
-                            style={{ background: project.color }}
-                        >
+                        <div key={`proj_${project.id}`} className="project-container" style={{ background: project.color }}>
                             <div>
                                 <b>{project.name}</b>
                             </div>
                             <button
+                                data-testid={project.name}
                                 onClick={() => {
                                     deleteObject("projects", project.id);
                                 }}
@@ -116,7 +113,7 @@ function Overview() {
                 })}
             </div>
             <div className={showHideTasks}>
-            <h2>Tasks</h2>
+                <h2>Tasks</h2>
                 {tasks.map((task) => {
                     const project = projects.find((project) => project.id === task.projectId);
                     let color;
@@ -125,11 +122,7 @@ function Overview() {
                         project.id === task.projectId ? (color = project.color) : (hej = null);
                     });
                     return (
-                        <div
-                            key={`task_${task.id}`}
-                            className="project-container task"
-                            style={{ background: color }}
-                        >
+                        <div key={`task_${task.id}`} className="project-container task" style={{ background: color }}>
                             <div>
                                 <b>Project: {project.name}</b>
                             </div>
@@ -137,6 +130,7 @@ function Overview() {
                                 <b>Task: {task.title}</b>
                             </div>
                             <button
+                                data-testid={task.title}
                                 onClick={() => {
                                     deleteObject("tasks", task.id);
                                 }}

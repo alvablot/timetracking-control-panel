@@ -6,15 +6,28 @@ import { ProjectProvider } from "../context/ProjectContext";
 import App from "../App";
 import AddTimer from "../components/AddTimer";
 
-describe("App", () => {
-    it("renders headline", () => {
+import { setupServer } from "msw/node";
+import { buildHandlers } from "./handlers";
+import Navbar from "../components/Navbar";
+import Timer from "../pages/Timer";
+
+const projectServer = setupServer(...buildHandlers());
+
+beforeAll(() => projectServer.listen());
+afterAll(() => projectServer.close());
+
+describe("Timer", () => {
+    it("Timer", async () => {
         render(
             <ProjectProvider>
                 <App>
+                    <Timer />
                     <AddTimer />
                 </App>
             </ProjectProvider>
         );
+        const timer = await screen.getByText("Timer");
+        expect(timer).toHaveTextContent("Timer");
 
         screen.debug();
 
