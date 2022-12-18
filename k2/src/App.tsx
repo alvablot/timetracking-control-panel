@@ -152,6 +152,7 @@ function App() {
                                     </td>
                                     <td key={`all_delete2_${element.id}`}>
                                         <button
+                                            data-testid="taskDeleteButton"
                                             onClick={() => {
                                                 deletePost(element.id, "tasks");
                                                 fetchAll();
@@ -218,6 +219,7 @@ function App() {
                                     <td key={`timeElapsed_${element.id}`}>{element.timeElapsed}</td>
                                     <td key={`delete3_${element.id}`}>
                                         <button
+                                            data-testid="deleteInvoiceButton"
                                             onClick={() => {
                                                 deletePost(element.id, "timelogs");
                                                 fetchAll();

@@ -76,6 +76,7 @@ function Projects() {
                                 </td> */}
                                 <td key={`delete1_${element.id}`}>
                                     <button
+                                        data-testid="projectDeleteButton"
                                         onClick={() => {
                                             deletePost(element.id, "projects");
                                             fetchData("projects");

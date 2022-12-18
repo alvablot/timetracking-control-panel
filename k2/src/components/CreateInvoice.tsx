@@ -22,14 +22,17 @@ function CreateInvoice() {
         if (id > -1) {
             setInvoiceProj(project.find((proj) => proj.id === id));
             setInvoiceTasks(task.filter((task) => task.projectId === id));
-        } 
+        }
     }
 
     function selectTask(e: React.ChangeEvent<HTMLSelectElement>): void {
         const id: number = parseInt(e.target.value);
         if (id > -1) {
             const taskToPush: Task[] = task.filter((proj) => proj.id === id);
-            setInvoiceTasksOptions((invoiceTasksOptions) => [...invoiceTasksOptions, taskToPush[0]]);
+            setInvoiceTasksOptions((invoiceTasksOptions) => [
+                ...invoiceTasksOptions,
+                taskToPush[0],
+            ]);
         }
     }
 
@@ -109,7 +112,11 @@ function CreateInvoice() {
                     <option value={-1}>Choose project</option>
                     {project.map((element) => {
                         return (
-                            <option value={element.id} key={`projOpt_${element.id}`}>
+                            <option
+                                data-testid="invoiceProjectOption"
+                                value={element.id}
+                                key={`projOpt_${element.id}`}
+                            >
                                 {element.name}
                             </option>
                         );
@@ -126,9 +133,14 @@ function CreateInvoice() {
                     }}
                 >
                     <option value="-1">Add task to invoice</option>
-                    {invoiceTasks.map((element) => {
+                    {/* {invoiceTasks.map((element) => { */}
+                    {task.map((element) => {
                         return (
-                            <option value={element.id} key={`taskOpt_${element.id}`}>
+                            <option
+                                data-testid="invoiceTaskOption"
+                                value={element.id}
+                                key={`taskOpt_${element.id}`}
+                            >
                                 {element.title}
                             </option>
                         );
@@ -248,7 +260,7 @@ function CreateInvoice() {
                     <div>Customer </div>
                     <div>
                         <input
-                            placeholder="Add Invoice"
+                            data-testid="Add Invoice"
                             required
                             className="normalInput"
                             type="text"
@@ -278,7 +290,9 @@ function CreateInvoice() {
                     </div>
                 </div>
             </div>
-            <button onClick={() => saveInvoice()}>Save</button>
+            <button data-testid="Save Invoice" onClick={() => saveInvoice()}>
+                Save
+            </button>
         </div>
     );
 }

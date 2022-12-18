@@ -37,7 +37,7 @@ describe("Projects", () => {
 
         await userEvent.click(screen.getAllByText("Create new project")[0]);
         // Deletar project
-        await userEvent.click(screen.getAllByTestId("Testing add project")[0]);
+        await userEvent.click(screen.getByTestId(/Testing add project/i));
         const items = await screen.findAllByText("x");
         expect(items).toHaveLength(4);
         expect(screen.getAllByText("Testing add project")[0]).toHaveTextContent("Testing add project");

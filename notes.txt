@@ -2,3 +2,4 @@ npx playwright codegen localhost...
 npx playwright test k1.test.js
 
 json-server --watch db.json
+npx playwright codegen demo.playwright.dev/todomvc
