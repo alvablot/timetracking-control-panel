@@ -98,6 +98,7 @@ function Invoices() {
                                 <td key={`amount_${element.id}`}>{element.amount} kr</td>
                                 <td key={`delete4_${element.id}`}>
                                     <button
+                                        data-testid={element.customer_name}
                                         onClick={() => {
                                             deletePost(element.id, "invoices");
                                             fetchData("invoices");

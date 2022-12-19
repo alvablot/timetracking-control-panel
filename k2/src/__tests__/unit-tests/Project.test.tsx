@@ -14,9 +14,8 @@ describe("Projects", () => {
             </ProjectProvider>
         );
 
-        await userEvent.click(screen.getAllByText("Projects")[0]);
         expect(screen.getAllByText("Projects")[0]).toHaveTextContent("Projects");
 
-        
+        screen.debug();
     });
 });

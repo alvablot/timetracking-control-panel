@@ -13,7 +13,7 @@ describe("Check if App renders", async () => {
                 <App />
             </ProjectProvider>
         );
-
+        expect(screen.getAllByText("Overview")[0]).toHaveTextContent("Overview");
         screen.debug();
     });
 });

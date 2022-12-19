@@ -19,21 +19,21 @@ describe("Projects", () => {
         render(
             <ProjectProvider>
                 <App />
-                <Projects />
             </ProjectProvider>
         );
 
         await userEvent.click(screen.getAllByText("Projects")[0]);
         expect(screen.getAllByText("Projects")[0]).toHaveTextContent("Projects");
 
-        
         const projectDeleteButtons = await screen.findAllByTestId("projectDeleteButton");
-        expect(projectDeleteButtons).toHaveLength(6);
-        
-        await userEvent.click(projectDeleteButtons[6]);
 
-        // expect(items).toHaveLength(5);
+        expect(projectDeleteButtons).toHaveLength(3);
 
-        
+        await userEvent.click(projectDeleteButtons[3]);
+
+        const projectDeleteButtons2 = await screen.findAllByTestId("projectDeleteButton");
+        expect(projectDeleteButtons2).toHaveLength(3);
+        //expect(projectDeleteButtons).toHaveLength(2);
+        screen.debug();
     });
 });

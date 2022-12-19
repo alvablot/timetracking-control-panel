@@ -95,7 +95,7 @@ export function buildHandlers() {
             due_date: "2022-02-29",
             amount: 500,
             project: 1,
-            customer_name: "Benny",
+            customer_name: "Test customer",
             created_date: "2022-01-29",
             id: 2,
         },

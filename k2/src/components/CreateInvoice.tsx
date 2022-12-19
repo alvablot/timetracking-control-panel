@@ -105,6 +105,7 @@ function CreateInvoice() {
             <Header2 text={"Create invoice"} />
             <form>
                 <select
+                    data-testid="projectSelect"
                     onChange={(e) => {
                         selectProj(e);
                     }}
@@ -128,6 +129,7 @@ function CreateInvoice() {
                     <div>{invoiceProj ? invoiceProj.price + " kr/h" : ""}</div>
                 </div>
                 <select
+                    data-testid="taskSelect"
                     onChange={(e) => {
                         selectTask(e);
                     }}

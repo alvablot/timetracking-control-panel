@@ -15,12 +15,12 @@ const projectServer = setupServer(...buildHandlers());
 
 beforeAll(() => projectServer.listen());
 afterAll(() => projectServer.close());
+
 describe("Projects", () => {
     it("Add view delete projects", async () => {
         render(
             <ProjectProvider>
                 <App />
-                <CreateInvoice />
             </ProjectProvider>
         );
 
@@ -28,14 +28,22 @@ describe("Projects", () => {
         expect(screen.getAllByText("Create invoice")[0]).toHaveTextContent("Create invoice");
 
         const invoiceProjectOptions = await screen.findAllByTestId("invoiceProjectOption");
-        expect(invoiceProjectOptions).toHaveLength(6);
+        expect(invoiceProjectOptions).toHaveLength(3);
 
-        await userEvent.click(invoiceProjectOptions[6]);
-
+        const projectSelect = await screen.findByTestId("projectSelect");
+        userEvent.selectOptions(
+            projectSelect,
+            invoiceProjectOptions[1]
+        );
+        
         const invoiceTaskOptions = await screen.findAllByTestId("invoiceTaskOption");
-        expect(invoiceTaskOptions).toHaveLength(8);
+        expect(invoiceTaskOptions).toHaveLength(4);
 
-        await userEvent.click(invoiceTaskOptions[8]);
+        const taskSelect = await screen.findByTestId("taskSelect");
+        userEvent.selectOptions(
+            taskSelect,
+            invoiceTaskOptions[1]
+        );
 
         const customers = await screen.findAllByTestId("Add Invoice");
         await userEvent.type(customers[0], "Test customer");
@@ -46,10 +54,9 @@ describe("Projects", () => {
         await userEvent.click(screen.getAllByText("All")[3]);
         expect(screen.getAllByText("Invoices")[0]).toHaveTextContent("Invoices");
 
-        const deleteInvoiceButtons = await screen.findAllByTestId("deleteInvoiceButton");
+        const deleteInvoiceButtons = await screen.findAllByTestId("Test customer");
         await userEvent.click(deleteInvoiceButtons[0]);
-        
 
-
+        screen.debug();        
     });
 });

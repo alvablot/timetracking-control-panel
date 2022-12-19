@@ -33,6 +33,6 @@ describe("Projects", () => {
 
         // expect(items).toHaveLength(3);
 
-        
+        screen.debug();
     });
 });
