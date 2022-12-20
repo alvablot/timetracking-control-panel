@@ -7,7 +7,7 @@ import App from "../../App";
 import { ProjectProvider } from "../../contexts/ProjContext";
 import Invoices from "../../components/Invoices";
 
-describe("Check if App renders", async () => {
+describe("Check invoices", async () => {
     it("renders app", () => {
         render(
             <ProjectProvider>

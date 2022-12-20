@@ -6,7 +6,7 @@ import Menu from "../../components/Menu";
 import { ProjectProvider } from "../../contexts/ProjContext";
 
 describe("App", async () => {
-    it("test render headline2", () => {
+    it("Check Menu", () => {
         render(
             <ProjectProvider>
                 <Menu />

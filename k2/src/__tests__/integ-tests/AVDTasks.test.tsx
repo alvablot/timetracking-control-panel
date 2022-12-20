@@ -15,7 +15,7 @@ const projectServer = setupServer(...buildHandlers());
 beforeAll(() => projectServer.listen());
 afterAll(() => projectServer.close());
 describe("Projects", () => {
-    it("Add view delete projects", async () => {
+    it("View delete tasks", async () => {
         render(
             <ProjectProvider>
                 <App />
@@ -30,8 +30,6 @@ describe("Projects", () => {
         expect(taskDeleteButtons).toHaveLength(4);
         
         await userEvent.click(taskDeleteButtons[4]);
-
-        // expect(items).toHaveLength(3);
 
         screen.debug();
     });

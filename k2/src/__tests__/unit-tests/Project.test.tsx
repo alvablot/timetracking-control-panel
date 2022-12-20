@@ -7,7 +7,7 @@ import { ProjectProvider } from "../../contexts/ProjContext";
 import Projects from "../../components/Projects";
 
 describe("Projects", () => {
-    it("Add view delete projects", async () => {
+    it("Check Project", async () => {
         render(
             <ProjectProvider>
                 <Projects />

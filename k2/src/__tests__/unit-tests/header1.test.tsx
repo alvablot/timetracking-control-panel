@@ -5,7 +5,7 @@ import "@testing-library/jest-dom";
 import Header1 from "../../components/Header1";
 
 describe("App", async () => {
-    it("test render headline", () => {
+    it("test headline", () => {
         render(<Header1 text="Overview" />);
 
         expect(screen.getByText(/Overview/i)).toHaveTextContent("Overview");

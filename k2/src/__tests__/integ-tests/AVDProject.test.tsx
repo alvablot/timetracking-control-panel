@@ -15,7 +15,7 @@ const projectServer = setupServer(...buildHandlers());
 beforeAll(() => projectServer.listen());
 afterAll(() => projectServer.close());
 describe("Projects", () => {
-    it("Add view delete projects", async () => {
+    it("Vview delete projects", async () => {
         render(
             <ProjectProvider>
                 <App />
@@ -33,7 +33,7 @@ describe("Projects", () => {
 
         const projectDeleteButtons2 = await screen.findAllByTestId("projectDeleteButton");
         expect(projectDeleteButtons2).toHaveLength(3);
-        //expect(projectDeleteButtons).toHaveLength(2);
+
         screen.debug();
     });
 });

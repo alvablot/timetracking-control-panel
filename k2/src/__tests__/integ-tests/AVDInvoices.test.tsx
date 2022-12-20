@@ -17,7 +17,7 @@ beforeAll(() => projectServer.listen());
 afterAll(() => projectServer.close());
 
 describe("Projects", () => {
-    it("Add view delete projects", async () => {
+    it("Add view delete invoices", async () => {
         render(
             <ProjectProvider>
                 <App />

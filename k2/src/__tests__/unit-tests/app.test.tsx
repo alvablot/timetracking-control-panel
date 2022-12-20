@@ -6,7 +6,7 @@ import "@testing-library/jest-dom";
 import App from "../../App";
 import { ProjectProvider } from "../../contexts/ProjContext";
 
-describe("Check if App renders", async () => {
+describe("Check App", async () => {
     it("renders app", () => {
         render(
             <ProjectProvider>
