@@ -50,6 +50,7 @@ function Projects() {
                                 <td key={`name_${element.id}`}>{element.name}</td>
                                 <td key={`price_${element.id}`} className="priceTd">
                                     <input
+                                        data-testid="priceInput"
                                         type="number"
                                         step="10"
                                         onChange={(e: ChangeEvent<HTMLInputElement>) => {

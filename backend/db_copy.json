@@ -1,0 +1,294 @@
+{
+    "projects": [
+        {
+            "name": "Laga mat",
+            "color": "#e3da3b",
+            "id": 1,
+            "price": 200
+        },
+        {
+            "name": "Städa",
+            "color": "#af3bee",
+            "id": 2,
+            "price": 400
+        },
+        {
+            "name": "Koda",
+            "color": "#fb3a64",
+            "price": 2600,
+            "id": 3
+        },
+        {
+            "name": "Test project",
+            "color": "#ffb651",
+            "price": 200,
+            "id": 4
+        },
+        {
+            "name": "Test project2",
+            "color": "#ffb651",
+            "price": 200,
+            "id": 5
+        }
+    ],
+    "invoices": [
+        {
+            "status": "Ej betald",
+            "due_date": "2021-08-29",
+            "amount": 200,
+            "project": 1,
+            "customer_name": "Oscar",
+            "created_date": "2021-07-29",
+            "id": -1
+        },
+        {
+            "status": "Ejetald",
+            "due_date": "2021-02-29",
+            "amount": 500,
+            "project": 1,
+            "customer_name": "Benny",
+            "created_date": "2021-01-29",
+            "id": 0
+        },
+        {
+            "status": "Betald",
+            "due_date": "2022-04-29",
+            "amount": 800,
+            "project": 2,
+            "customer_name": "Berit",
+            "created_date": "2022-03-29",
+            "id": 1
+        },
+        {
+            "status": "Betald",
+            "due_date": "2022-04-29",
+            "amount": 800,
+            "project": 2,
+            "customer_name": "Berit",
+            "created_date": "2022-03-29",
+            "id": 3
+        },
+        {
+            "status": "Betald",
+            "due_date": "2022-05-29",
+            "amount": 2200,
+            "project": 2,
+            "customer_name": "Kalle",
+            "created_date": "2022-04-29",
+            "id": 4
+        },
+        {
+            "status": "Betald",
+            "due_date": "2022-06-29",
+            "amount": 2500,
+            "project": 2,
+            "customer_name": "Oscar",
+            "created_date": "2022-05-29",
+            "id": 5
+        },
+        {
+            "status": "Betald",
+            "due_date": "2022-07-29",
+            "amount": 2000,
+            "project": 2,
+            "customer_name": "Lena",
+            "created_date": "2022-06-29",
+            "id": 6
+        },
+        {
+            "status": "Betald",
+            "due_date": "2022-08-29",
+            "amount": 100,
+            "project": 2,
+            "customer_name": "Pelle",
+            "created_date": "2022-07-29",
+            "id": 7
+        },
+        {
+            "status": "Betald",
+            "due_date": "2022-09-29",
+            "amount": 1250,
+            "project": 2,
+            "customer_name": "Pelle",
+            "created_date": "2022-08-29",
+            "id": 8
+        },
+        {
+            "status": "Betald",
+            "due_date": "2022-10-29",
+            "amount": 3000,
+            "project": 2,
+            "customer_name": "Pelle",
+            "created_date": "2022-09-29",
+            "id": 9
+        },
+        {
+            "status": "Betald",
+            "due_date": "2022-09-29",
+            "amount": 666,
+            "project": 2,
+            "customer_name": "Pelle",
+            "created_date": "2022-10-29",
+            "id": 10
+        },
+        {
+            "status": "Ej betald",
+            "due_date": "2022-12-29",
+            "amount": 330,
+            "project": 2,
+            "customer_name": "Letti",
+            "created_date": "2022-11-29",
+            "id": 11
+        },
+        {
+            "status": "Betald",
+            "due_date": "2023-01-29",
+            "amount": 2000,
+            "project": 2,
+            "customer_name": "Pelle",
+            "created_date": "2022-12-29",
+            "id": 12
+        },
+        {
+            "status": "Betald",
+            "due_date": "2023-01-29",
+            "amount": 700,
+            "project": 2,
+            "customer_name": "Bernard",
+            "created_date": "2022-12-29",
+            "id": 13
+        },
+        {
+            "status": "Ej betald",
+            "due_date": "2022-03-29",
+            "amount": 1000,
+            "project": 1,
+            "customer_name": "Jag",
+            "created_date": "2022-02-29",
+            "id": 14
+        },
+        {
+            "status": "Ej betald",
+            "due_date": "2022-03-29",
+            "amount": 1000,
+            "project": 1,
+            "customer_name": "Test invoice",
+            "created_date": "2022-02-29",
+            "id": 15
+        }
+    ],
+    "tasks": [
+        {
+            "date": "2022-10-20",
+            "projectId": 1,
+            "title": "Pizza",
+            "start": 0,
+            "end": 0,
+            "timeElapsed": 0,
+            "active": false,
+            "id": 1
+        },
+        {
+            "date": "2022-10-23",
+            "projectId": 1,
+            "title": "Lasagne",
+            "start": 0,
+            "end": 6,
+            "timeElapsed": 666,
+            "active": false,
+            "id": 2
+        },
+        {
+            "date": "2022-10-23",
+            "projectId": 2,
+            "title": "Toa",
+            "start": 0,
+            "end": 5,
+            "timeElapsed": 10000,
+            "active": false,
+            "id": 3
+        },
+        {
+            "date": "2022-11-23",
+            "projectId": 2,
+            "title": "Flyttstäd",
+            "start": 0,
+            "end": 10,
+            "timeElapsed": 6000,
+            "active": false,
+            "id": 4
+        },
+        {
+            "date": "2022-11-23",
+            "projectId": 3,
+            "title": "TypeScript",
+            "start": 0,
+            "end": 4,
+            "timeElapsed": 666,
+            "active": false,
+            "id": 5
+        },
+        {
+            "date": "2022-11-23",
+            "projectId": 3,
+            "title": "JavaScript",
+            "start": 0,
+            "end": 5,
+            "timeElapsed": 5,
+            "active": false,
+            "id": 6
+        },
+        {
+            "date": "2022-12-15",
+            "projectId": 4,
+            "title": "Test task",
+            "start": 0,
+            "end": 0,
+            "timeElapsed": 0,
+            "active": false,
+            "id": 7
+        },
+        {
+            "date": "2022-12-15",
+            "projectId": 4,
+            "title": "Test task2",
+            "start": 0,
+            "end": 0,
+            "timeElapsed": 0,
+            "active": false,
+            "id": 8
+        }
+    ],
+    "timelogs": [
+        {
+            "taskId": 1,
+            "timeElapsed": "00:00:10",
+            "date": "2022-12-15",
+            "id": 6
+        },
+        {
+            "taskId": 1,
+            "timeElapsed": "00:00:00",
+            "date": "2022-12-15",
+            "id": 7
+        },
+        {
+            "taskId": 1,
+            "timeElapsed": "00:00:00",
+            "date": "2022-12-15",
+            "id": 8
+        },
+        {
+            "taskId": 1,
+            "timeElapsed": "00:00:00",
+            "date": "2022-12-15",
+            "id": 9
+        },
+        {
+            "taskId": 1,
+            "timeElapsed": "00:00:00",
+            "date": "2022-12-15",
+            "id": 10
+        }
+    ]
+}

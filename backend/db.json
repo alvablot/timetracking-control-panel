@@ -19,10 +19,16 @@
       "id": 3
     },
     {
-      "name": "Name",
+      "name": "Test project",
       "color": "#ffb651",
-      "price": 0,
+      "price": 200,
       "id": 4
+    },
+    {
+      "name": "Test project2",
+      "color": "#ffb651",
+      "price": 200,
+      "id": 5
     }
   ],
   "invoices": [
@@ -52,15 +58,6 @@
       "customer_name": "Berit",
       "created_date": "2022-03-29",
       "id": 1
-    },
-    {
-      "status": "Betald",
-      "due_date": "2022-02-29",
-      "amount": 500,
-      "project": 1,
-      "customer_name": "Benny",
-      "created_date": "2022-01-29",
-      "id": 2
     },
     {
       "status": "Betald",
@@ -169,6 +166,15 @@
       "customer_name": "Jag",
       "created_date": "2022-02-29",
       "id": 14
+    },
+    {
+      "status": "Ej betald",
+      "due_date": "2022-03-29",
+      "amount": 1000,
+      "project": 1,
+      "customer_name": "Test invoice",
+      "created_date": "2022-02-29",
+      "id": 15
     }
   ],
   "tasks": [
@@ -234,8 +240,18 @@
     },
     {
       "date": "2022-12-15",
-      "projectId": 1,
-      "title": "Title",
+      "projectId": 4,
+      "title": "Test task",
+      "start": 0,
+      "end": 0,
+      "timeElapsed": 0,
+      "active": false,
+      "id": 7
+    },
+    {
+      "date": "2022-12-15",
+      "projectId": 4,
+      "title": "Test task2",
       "start": 0,
       "end": 0,
       "timeElapsed": 0,
@@ -244,24 +260,6 @@
     }
   ],
   "timelogs": [
-    {
-      "taskId": 2,
-      "timeElapsed": "00:00:06",
-      "date": "2022-10-23",
-      "id": 2
-    },
-    {
-      "taskId": 3,
-      "timeElapsed": "00:00:05",
-      "date": "2022-11-23",
-      "id": 3
-    },
-    {
-      "taskId": 3,
-      "timeElapsed": "00:00:10",
-      "date": "2022-11-23",
-      "id": 4
-    },
     {
       "taskId": 1,
       "timeElapsed": "00:00:10",
@@ -285,6 +283,12 @@
       "timeElapsed": "00:00:00",
       "date": "2022-12-15",
       "id": 9
+    },
+    {
+      "taskId": 1,
+      "timeElapsed": "00:00:00",
+      "date": "2022-12-15",
+      "id": 10
     }
   ]
 }

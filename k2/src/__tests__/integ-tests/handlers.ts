@@ -73,7 +73,7 @@ export function buildHandlers() {
             id: -1,
         },
         {
-            status: "Ejetald",
+            status: "Ej betald",
             due_date: "2021-02-29",
             amount: 500,
             project: 1,
